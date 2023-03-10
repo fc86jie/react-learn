@@ -2,14 +2,22 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2023-03-09 13:52:21
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2023-03-09 14:33:39
+ * @LastEditTime: 2023-03-10 22:27:05
  * @FilePath: \craco.config.js
  * @Description:
  */
 
+const path = require('path');
+
 module.exports = {
   webpack: {
-    configure: {},
+    configure: {
+      resolve: {
+        alias: {
+          '@': path.resolve(__dirname, 'src/'),
+        },
+      },
+    },
   },
   devServer: {
     proxy: {
