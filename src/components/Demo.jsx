@@ -3,6 +3,7 @@ import React from 'react';
 class Demo extends React.PureComponent {
   state = {
     arr: [1, 2, 3],
+    a: 1,
   };
 
   p3 = React.createRef();
