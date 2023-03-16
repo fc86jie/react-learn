@@ -9,6 +9,9 @@ import UsePartialStateDemo from '@/components/UsePartialStateDemo';
 import UseRefDemo from '@/components/UseRefDemo';
 import UseStateDemo from '@/components/UseStateDemo';
 import Vote from '@/components/Vote';
+import VoteNew from '@/components/vote/Vote';
+import VoteContext from '@/components/vote/voteContext';
+import store from '@/store';
 import { useState } from 'react';
 
 import './App.css';
@@ -16,7 +19,11 @@ import './App.css';
 function App() {
   return (
     <>
-      <NavDemo></NavDemo>
+      <VoteContext.Provider value={{ store }}>
+        <VoteNew></VoteNew>
+      </VoteContext.Provider>
+
+      {/* <NavDemo></NavDemo> */}
       {/* <CountNew></CountNew> */}
       {/* <UsePartialStateDemo></UsePartialStateDemo> */}
       {/* <UseMemoDemo></UseMemoDemo> */}
