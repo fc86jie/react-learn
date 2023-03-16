@@ -2,6 +2,7 @@ import Count from '@/components/Count';
 import CountNew from '@/components/count/Count';
 import Demo from '@/components/Demo';
 import Dialog from '@/components/Dialog';
+import NavDemo from '@/components/NavDemo';
 import UseEffectDemo from '@/components/UseEffectDemo';
 import UseMemoDemo from '@/components/UseMemoDemo';
 import UsePartialStateDemo from '@/components/UsePartialStateDemo';
@@ -9,12 +10,14 @@ import UseRefDemo from '@/components/UseRefDemo';
 import UseStateDemo from '@/components/UseStateDemo';
 import Vote from '@/components/Vote';
 import { useState } from 'react';
+
 import './App.css';
 
 function App() {
   return (
     <>
-      <CountNew></CountNew>
+      <NavDemo></NavDemo>
+      {/* <CountNew></CountNew> */}
       {/* <UsePartialStateDemo></UsePartialStateDemo> */}
       {/* <UseMemoDemo></UseMemoDemo> */}
       {/* <UseRefDemo></UseRefDemo> */}

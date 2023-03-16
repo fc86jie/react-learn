@@ -1,0 +1,17 @@
+.title {
+  color: red;
+}
+
+.nav-list a {
+  color: blue;
+}
+
+/* 使用的地方最终会生成2个类名，一个是link本身的，一个是继承来的title */
+.link {
+  composes: title;
+  background-color: green;
+}
+
+:global(.clear) {
+  clear: both;
+}
