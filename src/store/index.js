@@ -1,26 +1,7 @@
 import { createStore } from 'redux';
 // import { createStore } from '@/xredux';
+import reducers from './reducers/index';
 
-let initial = {
-  supNum: 10,
-  opNum: 5,
-};
-
-const reducer = (state = initial, action) => {
-  state = { ...state };
-  switch (action.type) {
-    case 'VOTE_SUP':
-      state.supNum++;
-      break;
-    case 'VOTE_OP':
-      state.opNum++;
-      break;
-    default:
-      break;
-  }
-  return state;
-};
-
-const store = createStore(reducer);
+const store = createStore(reducers);
 
 export default store;

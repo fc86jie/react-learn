@@ -11,7 +11,7 @@ import { useContext, useEffect, useState } from 'react';
 
 const Main = () => {
   const { store } = useContext(VoteContext);
-  const { supNum, opNum } = store.getState();
+  const { supNum, opNum } = store.getState().vote;
   let [_, setNum] = useState(0);
 
   useEffect(() => {

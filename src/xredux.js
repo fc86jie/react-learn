@@ -2,7 +2,7 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2023-03-16 16:41:56
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2023-03-16 21:24:53
+ * @LastEditTime: 2023-03-16 21:29:54
  * @FilePath: \src\xredux.js
  * @Description:
  */
@@ -26,6 +26,8 @@ export const createStore = reduce => {
     state = reduce(state, action);
 
     listeners.forEach(fn => fn());
+
+    return action;
   };
 
   const subscribe = fn => {

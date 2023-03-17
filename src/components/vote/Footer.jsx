@@ -1,4 +1,5 @@
 import VoteContext from '@/components/vote/voteContext';
+import action from '@/store/actions';
 import { Button } from 'antd';
 import { useContext } from 'react';
 
@@ -9,9 +10,7 @@ const Footer = () => {
       <Button
         type="primary"
         onClick={() => {
-          store.dispatch({
-            type: 'VOTE_SUP',
-          });
+          store.dispatch(action.vote.support());
         }}>
         支持
       </Button>
@@ -19,9 +18,7 @@ const Footer = () => {
         type="primary"
         danger
         onClick={() => {
-          store.dispatch({
-            type: 'VOTE_OP',
-          });
+          store.dispatch(action.vote.unSupport());
         }}>
         反对
       </Button>

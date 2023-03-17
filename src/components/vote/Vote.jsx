@@ -2,7 +2,7 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2023-03-16 11:58:41
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2023-03-16 12:49:00
+ * @LastEditTime: 2023-03-17 21:17:02
  * @FilePath: \src\components\vote\vote.jsx
  * @Description:
  */
@@ -26,7 +26,7 @@ const VoteBox = styled.div`
 
 const Vote = () => {
   const { store } = useContext(VoteContext);
-  const { supNum, opNum } = store.getState();
+  const { supNum, opNum } = store.getState().vote;
   let [_, setNum] = useState(0);
 
   useEffect(() => {

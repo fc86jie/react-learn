@@ -12,7 +12,6 @@ import Vote from '@/components/Vote';
 import VoteNew from '@/components/vote/Vote';
 import VoteContext from '@/components/vote/voteContext';
 import store from '@/store';
-import { useState } from 'react';
 
 import './App.css';
 
