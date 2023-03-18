@@ -12,15 +12,22 @@ import Vote from '@/components/Vote';
 import VoteNew from '@/components/vote/Vote';
 import VoteContext from '@/components/vote/voteContext';
 import store from '@/store';
+// import { Provider } from 'react-redux';
+import { Provider } from '@/source/xReactRedux';
 
 import './App.css';
 
 function App() {
   return (
     <>
-      <VoteContext.Provider value={{ store }}>
+      {/* react-redux使用 */}
+      <Provider store={store}>
         <VoteNew></VoteNew>
-      </VoteContext.Provider>
+      </Provider>
+      {/* redux使用 */}
+      {/* <VoteContext.Provider value={{ store }}>
+        <VoteNew></VoteNew>
+      </VoteContext.Provider> */}
 
       {/* <NavDemo></NavDemo> */}
       {/* <CountNew></CountNew> */}

@@ -8,18 +8,23 @@
  */
 import VoteContext from '@/components/vote/voteContext';
 import { useContext, useEffect, useState } from 'react';
+// import { connect } from 'react-redux';
+import { connect } from '@/source/xReactRedux';
 
-const Main = () => {
-  const { store } = useContext(VoteContext);
-  const { supNum, opNum } = store.getState().vote;
-  let [_, setNum] = useState(0);
+const Main = props => {
+  // const { store } = useContext(VoteContext);
+  // const { supNum, opNum } = store.getState().vote;
+  // let [_, setNum] = useState(0);
 
-  useEffect(() => {
-    store.subscribe(() => {
-      // 保证每次的值不一样，强制触发更新
-      setNum(+new Date());
-    });
-  }, []);
+  // useEffect(() => {
+  //   store.subscribe(() => {
+  //     // 保证每次的值不一样，强制触发更新
+  //     setNum(+new Date());
+  //   });
+  // }, []);
+
+  const { supNum, opNum } = props;
+
   return (
     <div className="main">
       <p>支持人数：{supNum}</p>
@@ -28,4 +33,5 @@ const Main = () => {
   );
 };
 
-export default Main;
+// export default Main;
+export default connect(state => state.vote)(Main);
