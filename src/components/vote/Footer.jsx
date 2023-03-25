@@ -2,12 +2,12 @@ import VoteContext from '@/components/vote/voteContext';
 import action from '@/store/actions';
 import { Button } from 'antd';
 import { useContext } from 'react';
-// import { connect } from 'react-redux';
-import { connect } from '@/source/xReactRedux';
+import { connect } from 'react-redux';
+// import { connect } from '@/source/xReactRedux';
 
 const Footer = props => {
   // const { store } = useContext(VoteContext);
-  const { support, unSupport } = props;
+  const { support, unSupport, supportAsync } = props;
   return (
     <div className="footer">
       <Button
@@ -26,6 +26,13 @@ const Footer = props => {
           unSupport();
         }}>
         反对
+      </Button>
+      <Button
+        type="primary"
+        onClick={() => {
+          supportAsync();
+        }}>
+        异步支持
       </Button>
     </div>
   );

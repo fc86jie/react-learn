@@ -11,15 +11,19 @@ import UseStateDemo from '@/components/UseStateDemo';
 import Vote from '@/components/Vote';
 import VoteNew from '@/components/vote/Vote';
 import VoteContext from '@/components/vote/voteContext';
+import VoteToolKit from '@/components/voteToolKit/Vote';
 import store from '@/store';
-// import { Provider } from 'react-redux';
-import { Provider } from '@/source/xReactRedux';
+import storeToolkit from '@/storeToolKit';
+import { Provider } from 'react-redux'; // import { Provider } from '@/source/xReactRedux';
 
 import './App.css';
 
 function App() {
   return (
     <>
+      <Provider store={storeToolkit}>
+        <VoteToolKit></VoteToolKit>
+      </Provider>
       {/* react-redux使用 */}
       <Provider store={store}>
         <VoteNew></VoteNew>

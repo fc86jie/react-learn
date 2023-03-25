@@ -8,8 +8,8 @@
  */
 import VoteContext from '@/components/vote/voteContext';
 import { useContext, useEffect, useState } from 'react';
-// import { connect } from 'react-redux';
-import { connect } from '@/source/xReactRedux';
+import { connect } from 'react-redux';
+// import { connect } from '@/source/xReactRedux';
 import styled from 'styled-components';
 import Footer from './Footer';
 import Main from './Main';

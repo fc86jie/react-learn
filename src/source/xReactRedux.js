@@ -2,7 +2,7 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2023-03-18 18:15:38
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2023-03-18 18:42:11
+ * @LastEditTime: 2023-03-18 18:45:42
  * @FilePath: \src\source\xReactRedux.js
  * @Description:
  */
@@ -42,6 +42,7 @@ export function connect(mapStateToProps, mapDispatchToProps) {
         return () => {
           unSubscribe();
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       }, []);
 
       let state = getState();
