@@ -15,12 +15,20 @@ import VoteToolKit from '@/components/voteToolKit/Vote';
 import store from '@/store';
 import storeToolkit from '@/storeToolKit';
 import { Provider } from 'react-redux'; // import { Provider } from '@/source/xReactRedux';
-
+import { HashRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import RouterDemo from './pages/routers';
+import RouterDemo2 from './pages/routers/index2';
 
 function App() {
   return (
     <>
+      <HashRouter>
+        <RouterDemo2></RouterDemo2>
+      </HashRouter>
+      {/* <HashRouter>
+        <RouterDemo></RouterDemo>
+      </HashRouter> */}
       <Provider store={storeToolkit}>
         <VoteToolKit></VoteToolKit>
       </Provider>

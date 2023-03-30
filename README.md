@@ -11,4 +11,7 @@
 #### 自定义 webpack 配置
 
 - `npm run eject`，把 webpack 配置暴露出来
-- 
+
+### 支持装饰器
+
+`pnpm add @babel/plugin-proposal-decorators @babel/plugin-proposal-class-properties -D`
